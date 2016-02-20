@@ -1,0 +1,65 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+    <FrameLayout
+        android:id="@+id/content_frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+
+    <RelativeLayout
+        android:id="@+id/nav_header_container"
+        android:layout_width="match_parent"
+        android:layout_height="190dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="0dp"
+        android:background="#c42128">
+
+        <andtinder.view.ProfilePictureView
+            android:id="@+id/profilepicview"
+            android:layout_width="fill_parent"
+            android:layout_height="120dp"
+            android:layout_marginTop="30dp"></andtinder.view.ProfilePictureView>
+
+
+        <TextView
+            android:id="@+id/userName"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:textColor="#ffffff"
+            android:layout_below="@+id/profilepicview"
+            android:gravity="center"
+            android:text="user name"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textSize="15dp" />
+
+
+    </RelativeLayout>
+
+
+    <!-- <android.support.v7.widget.RecyclerView
+        android:id="@+id/drawerList"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:visibility="invisible"
+        android:layout_below="@id/nav_header_container"
+        android:layout_marginTop="1dp" /> -->
+
+    <!--  <FrameLayout
+          android:id="@+id/content_frame"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent" /> -->
+    <ListView
+        android:id="@+id/drawerList2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/nav_header_container"
+        android:layout_marginTop="0dp" />
+
+
+</RelativeLayout>
+

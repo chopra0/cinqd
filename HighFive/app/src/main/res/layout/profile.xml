@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.facebook.login.widget.ProfilePictureView
+            android:layout_width="365dp"
+            android:layout_height="365dp"
+            android:layout_margin="5dp"
+            android:foregroundGravity="center"
+            android:id="@+id/profilepicview1">
+        </com.facebook.login.widget.ProfilePictureView>
+
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text=""
+            android:textStyle="bold"
+            android:textSize="24dp"
+            android:textColor="@color/black"
+            android:id="@+id/name"
+            android:layout_below="@+id/profilepicview1"
+            android:layout_alignLeft="@+id/profilepicview1"
+            android:layout_alignStart="@+id/profilepicview1" />
+
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Upload New Video"
+            android:textColor="@color/white"
+            android:id="@+id/button2"
+            android:layout_margin="5dp"
+            android:textSize="15dp"
+            android:visibility="gone"
+            android:background="@drawable/rounded_corner"
+            android:backgroundTint="@color/app_color"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignRight="@+id/name"
+            android:layout_alignEnd="@+id/name" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Profile Video"
+            android:layout_margin="5dp"
+            android:textColor="@color/app_color"
+            android:visibility="gone"
+            android:id="@+id/currentvideo"
+            android:layout_below="@+id/profilepicview1"
+            android:layout_alignLeft="@+id/button2"
+            android:layout_alignStart="@+id/button2" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text=""
+            android:textColor="@color/black"
+            android:id="@+id/textView2"
+            android:layout_below="@+id/name"
+            android:layout_toRightOf="@+id/button2"
+            android:layout_toEndOf="@+id/button2" />
+
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:textColor="@color/black"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
+        android:textSize="18dp"
+        android:id="@+id/title"
+        android:text="Mr. Fun Kitty" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_above="@id/title"
+        android:id="@+id/border"
+        android:background="#ccc" />
+
+
+
+
+
+    <VideoView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitCenter"
+        android:layout_above="@+id/title"
+        android:visibility="gone"
+        android:src="@drawable/ic_launcher"
+        android:id="@+id/video" />
+<!--
+    <com.facebook.login.widget.ProfilePictureView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitCenter"
+        android:layout_above="@+id/title"
+        android:src="@drawable/ic_launcher"
+        android:id="@+id/image_g">
+    </com.facebook.login.widget.ProfilePictureView>
+    -->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitCenter"
+        android:layout_above="@+id/title"
+        android:src="@drawable/ic_launcher"
+        android:id="@+id/image_g" />
+
+    <TextureView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitCenter"
+        android:layout_above="@+id/title"
+        android:src="@drawable/ic_launcher"
+        android:id="@+id/texture_v" />
+
+
+
+</RelativeLayout>

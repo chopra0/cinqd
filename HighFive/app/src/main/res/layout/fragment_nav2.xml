@@ -1,0 +1,50 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+
+    <RelativeLayout
+        android:id="@+id/nav_header_container"
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:layout_marginTop="0dp"
+        android:layout_alignParentTop="true"
+        android:background="#c42128">
+        <andtinder.view.ProfilePictureView
+            android:layout_width="fill_parent"
+            android:layout_height="140dp"
+            android:layout_marginTop="20dp"
+            android:id="@+id/profilepicview">
+        </andtinder.view.ProfilePictureView>
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="user name"
+
+            android:id="@+id/userName"
+            android:layout_marginTop="140dp"
+            android:gravity="center"
+            android:layout_centerHorizontal="true" />
+
+
+    </RelativeLayout>
+    <FrameLayout
+        android:id="@+id/content_frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+    <ListView
+        android:id="@+id/drawerList1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/nav_header_container"
+        android:descendantFocusability="blocksDescendants"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:layout_marginTop="1dp" />
+
+
+</RelativeLayout>
+

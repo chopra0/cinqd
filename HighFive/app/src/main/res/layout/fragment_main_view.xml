@@ -1,0 +1,77 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:background="#FFFFFF"
+    tools:context="assembly.giraff.MainViewFragment$PlaceholderFragment">
+
+
+    <LinearLayout
+        android:id="@+id/ll_buttons"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/fave_button"
+            android:layout_width="@dimen/button_size"
+            android:layout_height="@dimen/button_size"
+            android:background="@drawable/button_green"
+            android:clickable="true"
+            android:scaleType="fitCenter"
+            android:src="@drawable/heart1" />
+
+        <ImageView
+            android:id="@+id/pass_button"
+            android:layout_width="@dimen/button_size"
+            android:layout_height="@dimen/button_size"
+            android:layout_marginLeft="1dp"
+            android:background="@drawable/button_green"
+            android:clickable="true"
+            android:scaleType="fitCenter"
+            android:src="@drawable/cross1" />
+
+    </LinearLayout>
+
+
+    <com.skyfishjy.library.RippleBackground
+        android:id="@+id/content"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        app:rb_color="#c42128"
+        app:rb_duration="3000"
+        app:rb_radius="25dp"
+        app:rb_rippleAmount="4"
+        app:rb_scale="6">
+
+
+
+        <andtinder.view.ProfilePictureView
+            android:id="@+id/profilepic2"
+            android:layout_width="fill_parent"
+            android:layout_height="100dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="20dp"></andtinder.view.ProfilePictureView>
+
+
+
+    </com.skyfishjy.library.RippleBackground>
+
+    <andtinder.view.CardContainer
+        android:id="@+id/card_container"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginBottom="105dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:clipToPadding="false"
+        android:padding="10dp" />
+
+</RelativeLayout>

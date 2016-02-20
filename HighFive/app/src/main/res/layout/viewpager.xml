@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewPager"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_above="@+id/login_button"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true" />
+
+        <com.liangfeizc.slidepageindicator.CirclePageIndicator
+            android:id="@+id/indicator"
+            android:gravity="bottom|center_horizontal"
+            android:layout_above="@+id/login_button"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+
+     <com.facebook.login.widget.LoginButton
+            android:id="@+id/login_button"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/mybutton"
+            android:text="Sign in with Facebook"
+            android:textSize="15dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:textColor="#ffffff"
+            android:layout_above="@+id/textFB"/>
+
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="30dp"
+            android:id="@+id/textFB"
+            android:gravity="center"
+            android:textColor="#9a9a9a"
+            android:text="We do not post anything to Facebook."
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"/>
+    </RelativeLayout>
+
+</LinearLayout>

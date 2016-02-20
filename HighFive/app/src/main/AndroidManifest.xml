@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.nancy.highfive">
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="17" />
+
+
+    <permission
+        android:name="com.javapapers.android.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+
+
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="com.example.nancy.highfive.c2dm.permission.RECEIVE" />
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- <android:uses-permission android:name="android.permission.READ_PHONE_STATE" />
+     <android:uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" android:maxSdkVersion="18" />-->
+
+    <application
+        android:name=".MyApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/cinqdlogo1024"
+        android:label="@string/app_name"
+        android:theme="@style/MyMaterialTheme">
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+
+        <!--
+            <receiver android:name="com.">
+            <intent-filter>
+                <action android:name="android.location.PROVIDERS_CHANGED" />
+            </intent-filter>
+        </receiver>
+        -->
+        <!-- <activity
+             android:name=".MainActivity"
+             android:label="@string/app_name"
+             android:screenOrientation="portrait" >
+             <intent-filter>
+                 <action android:name="android.intent.action.MAIN" />
+
+                 <category android:name="android.intent.category.DEFAULT" />
+             </intent-filter>
+         </activity> -->
+        <activity
+            android:name=".ProfileActivity"
+            android:label="Profile"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Discover"
+            android:label="Discover"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".YourVideos"
+            android:label="Discover" />
+        <activity
+            android:name=".Mysettings"
+            android:label="Settings"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".UploadActivity"
+            android:label="upload"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Splash"
+            android:label="@string/title_activity_splash"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".About"
+            android:label="about"
+            android:screenOrientation="portrait" />
+        <!-- <activity
+             android:name=".MainActivity1"
+             android:theme="@style/Theme.AppCompat" /> -->
+        <activity
+            android:name=".MainScreenActivity"
+            android:theme="@style/AppTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.facebook.FacebookActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity
+            android:name=".Privacy"
+            android:label="@string/title_activity_privacy"></activity>
+        <activity
+            android:name=".Terms"
+            android:label="@string/title_activity_terms"></activity>
+        <activity
+            android:name=".MatchActivity"
+            android:label="@string/title_activity_match"
+            android:theme="@style/Theme.Transparent2"></activity>
+        <!--  <activity
+              android:name=".MatchListActivity"
+              android:label="@string/title_activity_match_list" >
+          </activity> -->
+        <!-- [START gcm_receiver] -->
+        <receiver
+            android:name="com.google.android.gms.gcm.GcmReceiver"
+            android:exported="true"
+            android:permission="com.google.android.c2dm.permission.SEND" >
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+
+                <category android:name="gcm.play.android.samples.com.gcmquickstart" />
+            </intent-filter>
+        </receiver>
+        <!-- [END gcm_receiver] -->
+
+
+
+        <receiver
+            android:name=".GcmBroadcastReceiver"
+            android:permission="com.google.android.c2dm.permission.SEND" >
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+
+                <category android:name="com.javapapers.android" />
+            </intent-filter>
+        </receiver>
+        <service android:name=".GCMNotificationIntentService" />
+    </application>
+
+</manifest>
